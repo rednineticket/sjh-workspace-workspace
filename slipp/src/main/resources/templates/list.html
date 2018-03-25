@@ -31,12 +31,34 @@
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="/form.html">Register</a></li>
 	        <li><a href="/list">list of users</a></li>
+	        
 	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
+	    </div>
+	    <!-- /.navbar-collapse -->
+	  </div>
+	  <!-- /.container-fluid -->
 	</nav>
-    <h1>Hello, world Template</h1>
-
+	<div class="container">
+		<table class="table table-condensed">
+			<caption>list</caption>
+			<thead>
+				<tr>
+					<th>user id</th>
+					<th>name</th>
+					<th>email</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#users}}
+				<tr>
+					<th scope="row">{{userId}}</th>
+					<th>{{name}}</th>
+					<th>{{email}}</th>
+				</tr>
+				{{/users}}
+			</tbody>
+		</table>	
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
